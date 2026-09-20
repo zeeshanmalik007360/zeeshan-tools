@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zeeshan Tools — Free Online Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Zeeshan<span>Tools</span></div>
+    <a href="#tools">Tools</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <p class="badge">FREE • FAST • MOBILE FRIENDLY</p>
+
+  <h1>Useful tools for students & creators.</h1>
+
+  <p>
+    Create stories, count words, and get useful ideas —
+    all in one place.
+  </p>
+
+  <a class="btn" href="#tools">Explore Tools</a>
+</section>
+
+<section id="tools" class="tools">
+
+  <h2>Our Tools</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">✍️</div>
+      <h3>Story Generator</h3>
+
+      <p>Create a short kids story from a topic.</p>
+
+      <textarea
+        id="topic"
+        placeholder="e.g. A brave rabbit and a lion">
+      </textarea>
+
+      <button onclick="makeStory()">
+        Generate Story
+      </button>
+
+      <div id="story" class="output"></div>
+    </article>
+
+
+    <article class="card">
+      <div class="icon">🔢</div>
+      <h3>Word Counter</h3>
+
+      <p>Count words and characters instantly.</p>
+
+      <textarea
+        id="counter"
+        placeholder="Paste or type your text..."
+        oninput="countWords()">
+      </textarea>
+
+      <div class="stats">
+        <b id="words">0</b> words ·
+        <b id="chars">0</b> characters
+      </div>
+    </article>
+
+
+    <article class="card">
+      <div class="icon">📣</div>
+      <h3>Caption Ideas</h3>
+
+      <p>Get quick social-media caption ideas.</p>
+
+      <button onclick="captions()">
+        Generate Captions
+      </button>
+
+      <div id="captions" class="output"></div>
+    </article>
+
+
+    <article class="card">
+      <div class="icon">💡</div>
+      <h3>Coming Soon</h3>
+
+      <p>More useful tools will be added here.</p>
+
+      <button disabled>
+        Coming Soon
+      </button>
+    </article>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  © 2026 Zeeshan Tools • Free tools for everyone
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+        </html>
