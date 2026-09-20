@@ -1,33 +1,91 @@
-function makeStory() {
-  const topic =
-    document.getElementById("topic").value.trim() ||
-    "a brave rabbit and a lion";
+function story() {
+  let t = document.getElementById("topic").value || "a brave rabbit and a lion";
 
-  const story =
-    `Once upon a time, ${topic}.\n\n` +
-    `They faced a small problem in the forest, but instead of giving up, ` +
-    `they worked together. After trying a few ideas, they found a clever solution.\n\n` +
-    `Everyone learned an important lesson: courage and kindness can make a big difference.\n\n` +
-    `The End!`;
+  document.getElementById("story").textContent =
+    `Once upon a time, ${t}.
 
-  document.getElementById("story").textContent = story;
+They faced a difficult problem, but they stayed calm and worked together. Their clever idea helped them find a solution.
+
+They learned that courage, kindness and teamwork can make a big difference.
+
+The End!`;
 }
 
-function countWords() {
-  const text = document.getElementById("counter").value;
+function count() {
+  let t = document.getElementById("counter").value;
 
-  const words = text.trim()
-    ? text.trim().split(/\s+/).length
-    : 0;
+  document.getElementById("words").textContent =
+    t.trim() ? t.trim().split(/\s+/).length : 0;
 
-  document.getElementById("words").textContent = words;
-  document.getElementById("chars").textContent = text.length;
+  document.getElementById("chars").textContent = t.length;
 }
 
 function captions() {
-  document.getElementById("captions").textContent =
-    "✨ Making ideas happen.\n" +
-    "🚀 Learn. Create. Grow.\n" +
-    "💡 Small steps, big dreams.\n" +
-    "🔥 Create something awesome today!";
+  let x = {
+    general: [
+      "✨ Making ideas happen.",
+      "🚀 Create. Learn. Grow.",
+      "💡 Small steps, big dreams."
+    ],
+
+    motivation: [
+      "💪 Keep going.",
+      "🚀 Your future starts today.",
+      "🔥 Progress over perfection."
+    ],
+
+    study: [
+      "📚 Study mode: ON.",
+      "🎯 Focus on the goal.",
+      "✍️ Learn today, shine tomorrow."
+    ],
+
+    travel: [
+      "🌍 Collect moments.",
+      "✈️ New place, new memories.",
+      "🌅 Adventure is calling."
+    ]
+  };
+
+  document.getElementById("caps").textContent =
+    x[document.getElementById("type").value].join("\n");
 }
+
+function copy(id) {
+  navigator.clipboard.writeText(
+    document.getElementById(id).textContent
+  );
+
+  alert("Copied!");
+}
+
+function upper() {
+  document.getElementById("caseText").value =
+    document.getElementById("caseText").value.toUpperCase();
+}
+
+function lower() {
+  document.getElementById("caseText").value =
+    document.getElementById("caseText").value.toLowerCase();
+}
+
+function title() {
+  let e = document.getElementById("caseText");
+
+  e.value = e.value
+    .toLowerCase()
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+
+  localStorage.theme =
+    document.body.classList.contains("dark")
+      ? "dark"
+      : "light";
+}
+
+if (localStorage.theme === "dark") {
+  document.body.classList.add("dark");
+    }
