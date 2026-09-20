@@ -14,7 +14,7 @@ header {
   border-bottom: 1px solid #e7eaf0;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 10;
 }
 
 .nav {
@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 800;
 }
 
@@ -43,27 +43,27 @@ header {
 
 .hero {
   text-align: center;
-  padding: 75px 20px 65px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #eef0ff, #ffffff);
 }
 
 .badge {
-  font-size: 12px;
-  font-weight: 800;
   color: #5b5bf7;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .hero h1 {
-  font-size: clamp(36px, 7vw, 64px);
-  max-width: 800px;
-  margin: 15px auto;
+  font-size: clamp(38px, 7vw, 64px);
+  max-width: 850px;
+  margin: 18px auto;
   line-height: 1.05;
 }
 
 .hero p:not(.badge) {
-  max-width: 600px;
-  margin: 0 auto 25px;
+  max-width: 650px;
+  margin: 0 auto 30px;
   color: #687084;
   font-size: 18px;
   line-height: 1.6;
@@ -71,72 +71,84 @@ header {
 
 .btn,
 button {
-  display: inline-block;
   border: 0;
   border-radius: 12px;
   background: #5b5bf7;
-  color: #ffffff;
-  padding: 12px 18px;
+  color: white;
+  padding: 13px 20px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
 }
 
+.btn:hover,
+button:hover {
+  background: #4444e8;
+}
+
 .tools {
   max-width: 1100px;
   margin: auto;
-  padding: 55px 20px;
+  padding: 60px 20px;
 }
 
 .tools h2 {
   text-align: center;
-  font-size: 34px;
+  font-size: 36px;
+  margin-bottom: 35px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
 .card {
-  background: #ffffff;
+  background: white;
   border: 1px solid #e7eaf0;
   border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 8px 30px #1720330b;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(23, 32, 51, 0.08);
 }
 
 .icon {
-  font-size: 32px;
+  font-size: 34px;
 }
 
 .card h3 {
-  margin: 10px 0 5px;
+  margin: 12px 0 6px;
+  font-size: 22px;
 }
 
 .card p {
   color: #687084;
+  line-height: 1.5;
 }
 
 .card textarea {
   width: 100%;
-  min-height: 100px;
+  min-height: 110px;
   border: 1px solid #dfe3eb;
   border-radius: 12px;
-  padding: 12px;
+  padding: 13px;
   font: inherit;
   resize: vertical;
   margin: 10px 0;
+  outline: none;
+}
+
+.card textarea:focus {
+  border-color: #5b5bf7;
 }
 
 .output {
-  margin-top: 14px;
+  margin-top: 15px;
   background: #f5f7fb;
   border-radius: 12px;
-  padding: 14px;
+  padding: 15px;
   white-space: pre-line;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .stats {
@@ -151,4 +163,21 @@ button:disabled {
 
 footer {
   text-align: center;
-  padding
+  padding: 30px 20px;
+  color: #687084;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
