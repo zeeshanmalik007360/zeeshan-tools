@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e7eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #5b5bf7;
+}
+
+.nav a {
+  color: #172033;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 65px;
+  background: linear-gradient(135deg, #eef0ff, #ffffff);
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #5b5bf7;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 7vw, 64px);
+  max-width: 800px;
+  margin: 15px auto;
+  line-height: 1.05;
+}
+
+.hero p:not(.badge) {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #687084;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border: 0;
+  border-radius: 12px;
+  background: #5b5bf7;
+  color: #ffffff;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tools {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+.tools h2 {
+  text-align: center;
+  font-size: 34px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 30px #1720330b;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  color: #687084;
+}
+
+.card textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #dfe3eb;
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+  resize: vertical;
+  margin: 10px 0;
+}
+
+.output {
+  margin-top: 14px;
+  background: #f5f7fb;
+  border-radius: 12px;
+  padding: 14px;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.stats {
+  margin-top: 10px;
+  color: #687084;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  padding
