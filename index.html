@@ -1,71 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zeeshan Tools — Free Online Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeeshan Tools</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">Zeeshan<span>Tools</span></div>
+  <nav class="nav">
+    <a class="logo" href="#">Zeeshan<span>Tools</span></a>
     <a href="#tools">Tools</a>
-  </div>
+  </nav>
 </header>
 
 <main>
 
 <section class="hero">
-  <p class="badge">FREE • FAST • MOBILE FRIENDLY</p>
+  <div class="badge">FREE • FAST • MOBILE FRIENDLY</div>
 
-  <h1>Useful tools for students & creators.</h1>
+  <h1>Simple Tools.<br>Big Ideas.</h1>
 
   <p>
-    Create stories, count words, and get useful ideas —
+    Useful online tools for students, creators and everyday tasks —
     all in one place.
   </p>
 
-  <a class="btn" href="#tools">Explore Tools</a>
+  <a class="btn" href="#tools">Explore Tools ↓</a>
 </section>
+
 
 <section id="tools" class="tools">
 
-  <h2>Our Tools</h2>
+  <h2>Free Tools You Can Use</h2>
 
   <div class="grid">
 
+    <!-- Story Generator -->
     <article class="card">
       <div class="icon">✍️</div>
+
       <h3>Story Generator</h3>
 
-      <p>Create a short kids story from a topic.</p>
+      <p>Create a quick and fun story.</p>
 
-      <textarea
-        id="topic"
-        placeholder="e.g. A brave rabbit and a lion">
-      </textarea>
+      <textarea id="topic" placeholder="Example: Rabbit and lion"></textarea>
 
-      <button onclick="makeStory()">
-        Generate Story
-      </button>
+      <button onclick="story()">Generate Story</button>
 
       <div id="story" class="output"></div>
+
+      <button onclick="copy('story')">📋 Copy</button>
     </article>
 
 
+    <!-- Word Counter -->
     <article class="card">
       <div class="icon">🔢</div>
+
       <h3>Word Counter</h3>
 
       <p>Count words and characters instantly.</p>
 
       <textarea
         id="counter"
-        placeholder="Paste or type your text..."
-        oninput="countWords()">
+        placeholder="Type or paste your text..."
+        oninput="count()">
       </textarea>
 
       <div class="stats">
@@ -75,29 +77,47 @@
     </article>
 
 
+    <!-- Caption Generator -->
     <article class="card">
       <div class="icon">📣</div>
-      <h3>Caption Ideas</h3>
 
-      <p>Get quick social-media caption ideas.</p>
+      <h3>Caption Generator</h3>
 
-      <button onclick="captions()">
-        Generate Captions
-      </button>
+      <p>Generate social-media caption ideas.</p>
 
-      <div id="captions" class="output"></div>
+      <select id="type">
+        <option value="general">General</option>
+        <option value="motivation">Motivation</option>
+        <option value="study">Study</option>
+        <option value="travel">Travel</option>
+      </select>
+
+      <button onclick="captions()">Generate Captions</button>
+
+      <div id="caps" class="output"></div>
+
+      <button onclick="copy('caps')">📋 Copy</button>
     </article>
 
 
+    <!-- Text Case Converter -->
     <article class="card">
-      <div class="icon">💡</div>
-      <h3>Coming Soon</h3>
+      <div class="icon">🔠</div>
 
-      <p>More useful tools will be added here.</p>
+      <h3>Text Case Converter</h3>
 
-      <button disabled>
-        Coming Soon
-      </button>
+      <p>Convert your text into different cases.</p>
+
+      <textarea
+        id="caseText"
+        placeholder="Enter your text...">
+      </textarea>
+
+      <button onclick="upper()">UPPERCASE</button>
+
+      <button onclick="lower()">lowercase</button>
+
+      <button onclick="title()">Title Case</button>
     </article>
 
   </div>
@@ -106,11 +126,14 @@
 
 </main>
 
+
 <footer>
-  © 2026 Zeeshan Tools • Free tools for everyone
+  <b>Zeeshan<span>Tools</span></b>
+  <p>© 2026 Zeeshan Tools • Free Online Tools</p>
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
-        </html>
+</html>
