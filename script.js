@@ -107,3 +107,16 @@ function generateQR() {
     height: 180
   });
 }
+function downloadQR() {
+  const qrImage = document.querySelector("#qrcode img");
+
+  if (!qrImage) {
+    alert("Please generate a QR code first.");
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.href = qrImage.src;
+  link.download = "zeeshan-tools-qr.png";
+  link.click();
+}
