@@ -1,3 +1,4 @@
+
 function story() {
   let t = document.getElementById("topic").value || "a brave rabbit and a lion";
 
@@ -89,3 +90,20 @@ function toggleTheme() {
 if (localStorage.theme === "dark") {
   document.body.classList.add("dark");
     }
+function generateQR() {
+  const text = document.getElementById("qrText").value.trim();
+  const qrBox = document.getElementById("qrcode");
+
+  qrBox.innerHTML = "";
+
+  if (!text) {
+    qrBox.innerHTML = "Please enter text or a link.";
+    return;
+  }
+
+  new QRCode(qrBox, {
+    text: text,
+    width: 180,
+    height: 180
+  });
+}
