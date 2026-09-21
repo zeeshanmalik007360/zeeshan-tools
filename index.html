@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeeshan Tools</title> 
+
+  <title>Zeeshan Tools</title>
+
   <meta name="description" content="Zeeshan Tools offers free, fast and easy online tools for students, creators and everyday tasks.">
- <meta name="google-site-verification" content="mKqk8Oh5fqCcPFHy5--gnB25YxqP50YTWf2_QsLecPE" />
+
+  <meta name="google-site-verification" content="mKqk8Oh5fqCcPFHy5--gnB25YxqP50YTWf2_QsLecPE">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -39,26 +43,52 @@
   <h2>Free Tools You Can Use</h2>
 
   <div class="grid">
-    <!-- QR Code Generator -->
-<article class="card">
-  <div class="icon">📱</div>
 
-  <h3>QR Code Generator</h3>
+    <!-- Caption Generator -->
+    <article class="card">
+      <div class="icon">📣</div>
 
-  <p>Create a QR code from text or a link.</p>
+      <h3>Caption Generator</h3>
 
-  <input
-    id="qrText"
-    type="text"
-    placeholder="Enter text or website link..."
-  >
+      <p>Enter a topic and generate caption ideas.</p>
 
-  <button onclick="generateQR()">Generate QR Code</button>
-<p class="qr-tip">Your QR code will appear below.</p>
-  <div id="qrcode" class="output"></div>
-  <button onclick="downloadQR()">⬇️ Download QR Code</button>
-</article>
-    
+      <input
+        id="captionTopic"
+        type="text"
+        placeholder="Enter your topic..."
+      >
+
+      <button type="button" onclick="generateCaption()">
+        Generate Captions
+      </button>
+
+      <div id="caps" class="output"></div>
+
+      <button type="button" onclick="copy('caps')">
+        📋 Copy
+      </button>
+    </article>
+
+
+    <!-- Text Case Converter -->
+    <article class="card">
+      <div class="icon">🔠</div>
+
+      <h3>Text Case Converter</h3>
+
+      <p>Convert your text into different cases.</p>
+
+      <textarea
+        id="caseText"
+        placeholder="Enter your text..."></textarea>
+
+      <button onclick="upper()">UPPERCASE</button>
+
+      <button onclick="lower()">lowercase</button>
+
+      <button onclick="title()">Title Case</button>
+    </article>
+
 
     <!-- Story Generator -->
     <article class="card">
@@ -68,7 +98,9 @@
 
       <p>Create a quick and fun story.</p>
 
-      <textarea id="topic" placeholder="Example: Rabbit and lion"></textarea>
+      <textarea
+        id="topic"
+        placeholder="Example: Rabbit and lion"></textarea>
 
       <button onclick="story()">Generate Story</button>
 
@@ -89,8 +121,7 @@
       <textarea
         id="counter"
         placeholder="Type or paste your text..."
-        oninput="count()">
-      </textarea>
+        oninput="count()"></textarea>
 
       <div class="stats">
         <b id="words">0</b> words ·
@@ -99,48 +130,31 @@
     </article>
 
 
-    
-
-
-    <!-- Text Case Converter -->
+    <!-- QR Code Generator -->
     <article class="card">
-      <div class="icon">🔠</div>
+      <div class="icon">📱</div>
 
-      <h3>Text Case Converter</h3>
+      <h3>QR Code Generator</h3>
 
-      <p>Convert your text into different cases.</p>
+      <p>Create a QR code from text or a link.</p>
 
-      <textarea
-        id="caseText"
-        placeholder="Enter your text...">
-      </textarea>
-<!-- Caption Generator -->
-<article class="card">
-  <div class="icon">📣</div>
+      <input
+        id="qrText"
+        type="text"
+        placeholder="Enter text or website link..."
+      >
 
-  <h3>Caption Generator</h3>
+      <button onclick="generateQR()">Generate QR Code</button>
 
-  <p>Enter a topic and generate caption ideas.</p>
+      <p class="qr-tip">
+        Your QR code will appear below.
+      </p>
 
-  <input
-    id="captionTopic"
-    type="text"
-    placeholder="Enter your topic..."
-  >
+      <div id="qrcode" class="output"></div>
 
-  <button type="button" onclick="generateCaption()">
-    Generate Captions
-  </button>
-
-  <div id="caps" class="output"></div>
-
-  <button type="button" onclick="copy('caps')">📋 Copy</button>
-</article>
-      <button onclick="upper()">UPPERCASE</button>
-
-      <button onclick="lower()">lowercase</button>
-
-      <button onclick="title()">Title Case</button>
+      <button onclick="downloadQR()">
+        ⬇️ Download QR Code
+      </button>
     </article>
 
   </div>
@@ -150,22 +164,21 @@
 </main>
 
 
-<<footer>
+<footer>
   <b>Zeeshan<span>Tools</span></b>
 
   <p>© 2026 Zeeshan Tools • Free Online Tools</p>
 
   <p>
-<a href="about.html">About Us</a> |
-<a href="privacy.html">Privacy Policy</a> |
-<a href="disclaimer.html">Disclaimer</a> |
-<a href="contact.html">Contact Us</a>
+    <a href="about.html">About Us</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a> |
+    <a href="contact.html">Contact Us</a>
   </p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <script src="script.js"></script>
 
