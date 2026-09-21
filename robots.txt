@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zeeshanmalik007360.github.io/zeeshan-tools/sitemap.xml
