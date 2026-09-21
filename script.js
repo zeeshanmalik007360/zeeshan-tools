@@ -39,7 +39,6 @@ function generateCaption() {
 
   output.textContent = captions.join("\n");
 }
-}
 
 function copy(id) {
   navigator.clipboard.writeText(
