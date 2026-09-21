@@ -38,6 +38,25 @@
   <h2>Free Tools You Can Use</h2>
 
   <div class="grid">
+    <!-- QR Code Generator -->
+<article class="card">
+  <div class="icon">📱</div>
+
+  <h3>QR Code Generator</h3>
+
+  <p>Create a QR code from text or a link.</p>
+
+  <input
+    id="qrText"
+    type="text"
+    placeholder="Enter text or website link..."
+  >
+
+  <button onclick="generateQR()">Generate QR Code</button>
+
+  <div id="qrcode" class="output"></div>
+</article>
+    
 
     <!-- Story Generator -->
     <article class="card">
@@ -133,7 +152,7 @@
   <p>© 2026 Zeeshan Tools • Free Online Tools</p>
 </footer>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   
 
 
