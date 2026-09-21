@@ -57,13 +57,12 @@ function lower() {
   document.getElementById("caseText").value =
     document.getElementById("caseText").value.toLowerCase();
 }
-
-function title() {
-  let e = document.getElementById("caseText");
+function titleCase() {
+  const e = document.getElementById("caseText");
 
   e.value = e.value
-    .toLowerCase()
-    .replace(/\b\w/g, c => c.toUpperCase());
+  .toLowerCase()
+ .replace(/\b\w/g, c => c.toUpperCase());
 }
 
 function toggleTheme() {
