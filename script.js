@@ -20,7 +20,6 @@ function count() {
 
   document.getElementById("chars").textContent = t.length;
 }
-
 function captions() {
   let x = {
     general: [
@@ -46,6 +45,7 @@ function captions() {
       "✈️ New place, new memories.",
       "🌅 Adventure is calling."
     ]
+
   };
 
   document.getElementById("caps").textContent =
