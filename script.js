@@ -20,36 +20,25 @@ function count() {
 
   document.getElementById("chars").textContent = t.length;
 }
-function captions() {
-  let x = {
-    general: [
-      "✨ Making ideas happen.",
-      "🚀 Create. Learn. Grow.",
-      "💡 Small steps, big dreams."
-    ],
+function generateCaption() {
+  const topic = document.getElementById("captionTopic").value.trim();
+  const output = document.getElementById("caps");
 
-    motivation: [
-      "💪 Keep going.",
-      "🚀 Your future starts today.",
-      "🔥 Progress over perfection."
-    ],
+  if (!topic) {
+    output.textContent = "Please enter a topic first.";
+    return;
+  }
 
-    study: [
-      "📚 Study mode: ON.",
-      "🎯 Focus on the goal.",
-      "✍️ Learn today, shine tomorrow."
-    ],
+  const captions = [
+    `✨ Making memories with ${topic}.`,
+    `🚀 Life is better when you enjoy ${topic}.`,
+    `💫 Keep creating, keep enjoying ${topic}.`,
+    `🔥 ${topic} — just the vibe I needed!`,
+    `🌟 Enjoy the moment and make it count with ${topic}.`
+  ];
 
-    travel: [
-      "🌍 Collect moments.",
-      "✈️ New place, new memories.",
-      "🌅 Adventure is calling."
-    ]
-
-  };
-
-  document.getElementById("caps").textContent =
-    x[document.getElementById("type").value].join("\n");
+  output.textContent = captions.join("\n");
+}
 }
 
 function copy(id) {
