@@ -44,52 +44,48 @@
 
   <div class="grid">
 
-    <!-- Caption Generator -->
-    <article class="card">
-      <div class="icon">📣</div>
-
-      <h3>Caption Generator</h3>
-
-      <p>Enter a topic and generate caption ideas.</p>
-
-      <input
-        id="captionTopic"
-        type="text"
-        placeholder="Enter your topic..."
-      >
-
-      <button type="button" onclick="generateCaption()">
-        Generate Captions
-      </button>
-
-      <div id="caps" class="output"></div>
-
-      <button type="button" onclick="copy('caps')">
-        📋 Copy
-      </button>
-    </article>
-
-
     <!-- Text Case Converter -->
-    <article class="card">
-      <div class="icon">🔠</div>
+<article class="card">
+  <div class="icon">🔠</div>
 
-      <h3>Text Case Converter</h3>
+  <h3>Text Case Converter</h3>
 
-      <p>Convert your text into different cases.</p>
+  <p>Convert your text into different cases.</p>
 
-      <textarea
-        id="caseText"
-        placeholder="Enter your text..."></textarea>
+  <textarea
+    id="caseText"
+    placeholder="Enter your text..."></textarea>
 
-      <button onclick="upper()">UPPERCASE</button>
-
-      <button onclick="lower()">lowercase</button>
-
-      <button onclick="title()">Title Case</button>
-    </article>
+  <button type="button" onclick="upper()">UPPERCASE</button>
+  <button type="button" onclick="lower()">lowercase</button>
+  <button type="button" onclick="title()">Title Case</button>
+</article>
 
 
+<!-- Caption Generator -->
+<article class="card">
+  <div class="icon">📣</div>
+
+  <h3>Caption Generator</h3>
+
+  <p>Enter a topic and generate caption ideas.</p>
+
+  <input
+    id="captionTopic"
+    type="text"
+    placeholder="Enter your topic..."
+  >
+
+  <button type="button" onclick="generateCaption()">
+    Generate Captions
+  </button>
+
+  <div id="caps" class="output"></div>
+
+  <button type="button" onclick="copy('caps')">
+    📋 Copy
+  </button>
+</article>
     <!-- Story Generator -->
     <article class="card">
       <div class="icon">✍️</div>
