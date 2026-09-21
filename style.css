@@ -183,3 +183,6 @@ footer {
     font-size: 42px;
   }
 }
+button[onclick="generateQR()"] {
+  margin-top: 15px;
+}
